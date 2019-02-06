@@ -284,6 +284,7 @@ body {
           flex-flow: column nowrap;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: #ffc9b7;
 }
 
 .section {
