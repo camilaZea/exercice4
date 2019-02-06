@@ -66,8 +66,6 @@ section {
     overflow-x: hidden; overflow-y: auto;
 }
 
-<<<<<<< HEAD
-=======
 .menu a {
     text-decoration: none;
     color: white;
@@ -80,7 +78,18 @@ section {
     border-top: 1px solid white;
 }
 
->>>>>>> desing
+#chkBoutonBurger:checked~.global {
+    transform: translateX(0%);
+}
+
+#chkBoutonBurger:checked~.boutonBurger {
+    transform: rotate(90deg);
+}
+
+#chkBoutonBurger {
+    display: none;
+}
+
   .sidebar {
           grid-area: sidebar;
           background-color: #b79b9b;
