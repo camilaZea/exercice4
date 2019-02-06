@@ -10,11 +10,11 @@ body {
     /*Propriété comme item flex*/
     flex: 1 0 100%;
     /*Conteneur flex en rangée*/
-    display: flex;
+    //display: flex;
     /*Poussée vers la gauche pour ne pas voir le menu*/
-    transform: translateX(-100%);
+    //transform: translateX(-100%);
     /*Effet de transition sur la transformation*/
-    transition: transform 1s;
+    //transition: transform 1s;
 /*	overflow-x: hidden; */
 }
    
