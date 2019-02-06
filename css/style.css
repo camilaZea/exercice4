@@ -256,8 +256,17 @@ body {
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
   /*Conteneur flex en rangée*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   /*Poussée vers la gauche pour ne pas voir le menu*/
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   /*Effet de transition sur la transformation*/
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
   /*	overflow-x: hidden; */
 }
 
