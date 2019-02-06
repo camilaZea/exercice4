@@ -28,6 +28,13 @@ body {
     overflow-x: hidden; overflow-y: auto;
 }
 
+section {
+    background-color: #ffc9b7;
+    padding: 0 0.5rem;
+    /*Propriété comme item flex - peut s'étirer en hauteur*/
+    flex: 1 0 100%;
+}
+
   .sidebar {
           grid-area: sidebar;
           background-color: #b79b9b;
