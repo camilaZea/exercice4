@@ -3,6 +3,8 @@ body {
     font-family: "Comic Sans MS", cursive, sans-serif;
     display: flex;
     flex-direction: column;
+    max-width: 100vw;
+			min-height: 100vh;
   }
 
   .global {
