@@ -239,7 +239,6 @@ h6 {
 }
 
 body {
-  margin: 40px;
   font-family: "Comic Sans MS", cursive, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,6 +483,12 @@ section {
 .header,
 .footer {
   background-color: #f8d1ff;
+}
+
+footer {
+  text-align: center;
+  padding: 1%;
+  background-color: #E84545;
 }
 
 .sidebar2 {

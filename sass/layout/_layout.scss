@@ -1,5 +1,5 @@
 body {
-    margin: 40px;
+    
     font-family: "Comic Sans MS", cursive, sans-serif;
     display: flex;
     flex-direction: column;
@@ -201,6 +201,12 @@ section {
     background-color:#f8d1ff;
     
   }
+
+  footer {
+    text-align: center;
+    padding: 1%;
+    background-color: #E84545;
+}
   
   .sidebar2 {
     background-color:#f9caca;
