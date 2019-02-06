@@ -4,24 +4,21 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 100vw;
-			min-height: 100vh;
+    min-height: 100vh;
   }
 
-  .global {
+.global {
     max-width: 100vw;
-
     flex: 1 0 100%;
-
     /*Conteneur flex en rangée*/
-   display: flex;
+    display: flex;
     /*Poussée vers la gauche pour ne pas voir le menu*/
     transform: translateX(-100%);
     /*Effet de transition sur la transformation*/
     transition: transform 1s;
-/*	overflow-x: hidden; */
+    /*	overflow-x: hidden; */
 }
    
-
 .contenu {
     /*Sa largeur est fixée à 100%*/
     width: 100vw;
@@ -33,7 +30,7 @@ body {
     overflow-x: hidden; overflow-y: auto;
 }
 
-section {
+.section {
     background-color: #ffc9b7;
     padding: 0 0.5rem;
     /*Propriété comme item flex - peut s'étirer en hauteur*/
@@ -49,6 +46,18 @@ section {
     cursor: pointer;
     /*Effet de transition sur la rotation*/
     transition: transform 1s;
+}
+
+#chkBoutonBurger:checked~.global {
+    transform: translateX(0%);
+}
+
+#chkBoutonBurger:checked~.boutonBurger {
+    transform: rotate(90deg);
+}
+
+#chkBoutonBurger {
+    display: none;
 }
 
 .menu {
@@ -77,24 +86,70 @@ section {
     border-top: 1px solid white;
 }
 
-#chkBoutonBurger:checked~.global {
-    transform: translateX(0%);
+.sidebar {
+    grid-area: sidebar;
+    background-color: #b79b9b;
 }
 
-#chkBoutonBurger:checked~.boutonBurger {
-    transform: rotate(90deg);
+.sidebar2 {
+    grid-area: sidebar2;
 }
 
-#chkBoutonBurger {
-    display: none;
+.header {
+    grid-area: header;
 }
+
+.footer {
+    grid-area: footer;
+}
+  
+.wrapper {
+    background-color:#ffc9b7;
+    color: #444;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+    "header"
+    "sidebar"
+    "content"
+    "sidebar2"
+    "footer"
+}
+
+.box {
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%; 
+  }
+  
+  .header,
+  .footer {
+    background-color:#ffc9b7;
+    color: white;
+    
+  }
+
+  footer {
+    text-align: center;
+    padding: 1%;
+    background-color: #E84545;
+}
+  
+  .sidebar2 {
+    background-color:#444444;
+    color: white;
+  }
 
 @media screen and (min-width: 768px) {
     html {
         font-size: 1em;
         background-color: #444;
     }
-     
+        
     .boutonBurger {
         display: none
     }
@@ -124,92 +179,28 @@ section {
         border-top: none;
     }
 }
-
-  .sidebar {
-          grid-area: sidebar;
-          background-color: #b79b9b;
-      }
   
-      .sidebar2 {
-          grid-area: sidebar2;
-      }
-  
-      .content {
-          grid-area: content;
-      }
-  
-      .header {
-          grid-area: header;
-      }
-  
-      .footer {
-          grid-area: footer;
-      }
-  
-      .wrapper {
-          background-color:#ffc9b7;
-          color: #444;
-      }
-  
+@media only screen and (min-width: 500px)  {
     .wrapper {
-        margin-left: auto;
-        margin-right: auto;
-      display: grid;
-      grid-gap: 1em;
-      grid-template-areas:
-       "header"
-       "sidebar"
-       "content"
-       "sidebar2"
-       "footer"
-    }
-  
-      @media only screen and (min-width: 500px)  {
-      .wrapper {
-  
-          grid-template-columns: 20% auto;
-          grid-template-areas:
-      "header   header"
-          "sidebar  content"
-          "sidebar2 sidebar2"
-          "footer   footer";
-      }
-      }
-  
-      @media only screen and (min-width: 600px)   {
-          .wrapper {
-        grid-gap: 20px;
-              grid-template-columns: 120px auto 120px;
-              grid-template-areas:
-        "header  header  header"
-              "sidebar content sidebar2"
-              "footer  footer  footer";
-              max-width: 600px;
-          }
-      }
-  
-  .box {
-    background-color: #444;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 150%; 
-  }
-  
-  .header,
-  .footer {
-    background-color:#ffc9b7;
-    color: white;
-    
-  }
 
-  footer {
-    text-align: center;
-    padding: 1%;
-    background-color: #E84545;
+        grid-template-columns: 20% auto;
+        grid-template-areas:
+        "header   header"
+        "sidebar  content"
+        "sidebar2 sidebar2"
+        "footer   footer";
+    }
 }
   
-  .sidebar2 {
-    background-color:#444444;
-    color: white;
-  }
+@media only screen and (min-width: 600px)   {
+    .wrapper {
+        grid-gap: 20px;
+        grid-template-columns: 120px auto 120px;
+        grid-template-areas:
+        "header  header  header"
+        "sidebar content sidebar2"
+        "footer  footer  footer";
+        max-width: 600px;
+    }
+}
+  
